@@ -17,3 +17,5 @@ I'm an egotistical bastard, and I name all my projects after myself. First
 Linux, now git.
 
 [2007-06-14]
+
+Git is a useful tool by Linus Torwald
