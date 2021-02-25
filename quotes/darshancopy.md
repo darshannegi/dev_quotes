@@ -9,7 +9,7 @@ data, rather than the other way around, and I think it's one of the reasons git
 has been fairly successful […] I will, in fact, claim that the difference
 between a bad programmer and a good one is whether he considers his code or his
 data structures more important. Bad programmers worry about the code. Good
-programmers worry about data structures and their relationships.
+programmers worry about date structures and their relationships.
 
 [2006-06-27, https://lwn.net/Articles/193245/]
 
