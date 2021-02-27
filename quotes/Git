@@ -1,0 +1,396 @@
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    darshan.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git branch anoter-fowler-quote
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    darshan.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git switch another-fowler-quote
+fatal: invalid reference: another-fowler-quote
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git branch another-fowler-quote
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git switch another-fowler-quote
+Switched to branch 'another-fowler-quote'
+D       darshan.txt
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git status
+On branch another-fowler-quote
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    darshan.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git status
+On branch another-fowler-quote
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    darshan.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+        martin-fowler.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git commit -am "Added a file called Martin Fowler copy from Linux"
+[another-fowler-quote 030b0a5] Added a file called Martin Fowler copy from Linux
+ 1 file changed, 4 deletions(-)
+ delete mode 100644 darshan.txt
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git status
+On branch another-fowler-quote
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+        martin-fowler.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git diff master...another-fowler-quote
+diff --git a/darshan.txt b/darshan.txt
+deleted file mode 100644
+index b00fea6..0000000
+--- a/darshan.txt
++++ /dev/null
+@@ -1,4 +0,0 @@
+-hello this darssshan negi
+-graduated in 20200
+-
+-this is meh!
+\ No newline at end of file
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git branch another-fowler-quote
+fatal: A branch named 'another-fowler-quote' already exists.
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git switch another-fowler-quote
+Already on 'another-fowler-quote'
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git commit -am "minor update"
+On branch another-fowler-quote
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+        martin-fowler.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git status
+On branch another-fowler-quote
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .DS_Store
+        martin-fowler.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git diff master...another-fowler-quote
+diff --git a/darshan.txt b/darshan.txt
+deleted file mode 100644
+index b00fea6..0000000
+--- a/darshan.txt
++++ /dev/null
+@@ -1,4 +0,0 @@
+-hello this darssshan negi
+-graduated in 20200
+-
+-this is meh!
+\ No newline at end of file
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (another-fowler-quote)
+$ git switch master
+Switched to branch 'master'
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git merge another-fowler quote
+merge: another-fowler - not something we can merge
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git merge another-fowler quote
+merge: another-fowler - not something we can merge
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git merge another-fowler-quote
+Updating 531880d..030b0a5
+Fast-forward
+ darshan.txt | 4 ----
+ 1 file changed, 4 deletions(-)
+ delete mode 100644 darshan.txt
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git log
+commit 030b0a58839d18b80a7a2e3b72bb9b7af85d4995 (HEAD -> master, another-fowler-quote)
+Author: --list <darshannegi110@mail.com>
+Date:   Fri Feb 26 20:48:15 2021 +0530
+
+    Added a file called Martin Fowler copy from Linux
+
+commit 531880d449b9be4891e2e2dbab5ff81b441cc878 (anoter-fowler-quote)
+Author: --list <darshannegi110@mail.com>
+Date:   Thu Feb 25 20:45:19 2021 +0530
+
+    minor update
+
+commit af12c6fb17dc547a0ecb1c9c2a59b95e1d83f248
+Author: --list <darshannegi110@mail.com>
+Date:   Thu Feb 25 20:27:34 2021 +0530
+
+    inital commit
+
+commit 55b30b82e709761051b4ba2d92f7231dd6353219
+Author: --list <darshannegi110@mail.com>
+Date:   Thu Feb 25 14:19:43 2021 +0530
+
+    Added necessary changes
+
+commit 2c4d2c01f554a5072ad930017dd3fe07fb8b6acf
+Author: --list <darshannegi110@mail.com>
+Date:   Thu Feb 25 14:02:57 2021 +0530
+
+    This is a minor commit
+
+commit 30d6339df6ccfeb8ebba71a0f6b8772bebf25a68
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$ git log --graph --all
+* commit 030b0a58839d18b80a7a2e3b72bb9b7af85d4995 (HEAD -> master, another-fowler-quote)
+| Author: --list <darshannegi110@mail.com>
+| Date:   Fri Feb 26 20:48:15 2021 +0530
+|
+|     Added a file called Martin Fowler copy from Linux
+|
+* commit 531880d449b9be4891e2e2dbab5ff81b441cc878 (anoter-fowler-quote)
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 20:45:19 2021 +0530
+|
+|     minor update
+|
+* commit af12c6fb17dc547a0ecb1c9c2a59b95e1d83f248
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 20:27:34 2021 +0530
+|
+|     inital commit
+|
+* commit 55b30b82e709761051b4ba2d92f7231dd6353219
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 14:19:43 2021 +0530
+|
+|     Added necessary changes
+|
+* commit 2c4d2c01f554a5072ad930017dd3fe07fb8b6acf
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 14:02:57 2021 +0530
+|
+|     This is a minor commit
+|
+* commit 30d6339df6ccfeb8ebba71a0f6b8772bebf25a68
+:...skipping...
+* commit 030b0a58839d18b80a7a2e3b72bb9b7af85d4995 (HEAD -> master, another-fowler-quote)
+| Author: --list <darshannegi110@mail.com>
+| Date:   Fri Feb 26 20:48:15 2021 +0530
+|
+|     Added a file called Martin Fowler copy from Linux
+|
+* commit 531880d449b9be4891e2e2dbab5ff81b441cc878 (anoter-fowler-quote)
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 20:45:19 2021 +0530
+|
+|     minor update
+|
+* commit af12c6fb17dc547a0ecb1c9c2a59b95e1d83f248
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 20:27:34 2021 +0530
+|
+|     inital commit
+|
+* commit 55b30b82e709761051b4ba2d92f7231dd6353219
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 14:19:43 2021 +0530
+|
+|     Added necessary changes
+|
+* commit 2c4d2c01f554a5072ad930017dd3fe07fb8b6acf
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 14:02:57 2021 +0530
+|
+|     This is a minor commit
+|
+* commit 30d6339df6ccfeb8ebba71a0f6b8772bebf25a68
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 12:44:18 2021 +0530
+|
+|     Added copy quotes by Darshan
+|
+* commit d66d0863ca3a08994be54c063451d5d21ae5776b
+  Author: --list <darshannegi110@mail.com>
+  Date:   Thu Feb 25 12:32:33 2021 +0530
+
+      Initial commit
+~
+~
+~
+~
+~
+~
+~
+~
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes (master)
+$
+
+
+
+
+
+
+
+
+Git merge ---------------------------------------------------------------------------->
+
+
+
+git merge alan-kay-quotes
+Merge made by the 'recursive' strategy.
+ quotes/alan-kay.md | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 quotes/alan-kay.md
+
+Darshan@DarshanAcer MINGW64 ~/Downloads/dev_quotes/dev_quotes/quotes (master)
+$ git log --graph --all
+*   commit 7ebb4f17c121d9ae3878b84fc0983e9b84430113 (HEAD -> master)
+|\  Merge: 2b58f79 1c07ee0
+| | Author: --list <darshannegi110@mail.com>
+| | Date:   Fri Feb 26 22:51:40 2021 +0530
+| |
+| |     Merge branch 'alan-kay-quotes'
+| |
+| * commit 1c07ee06dd8291e8f4dc46131c0ee7a6e8e66f7c (alan-kay-quotes)
+| | Author: --list <darshannegi110@mail.com>
+| | Date:   Fri Feb 26 22:20:24 2021 +0530
+| |
+| |     Finally alan kay added
+| |
+* | commit 2b58f797c31a3e16f9894d47abc6a80e567ba696 (another-fowler-quote)
+|/  Author: --list <darshannegi110@mail.com>
+|   Date:   Fri Feb 26 22:40:57 2021 +0530
+|
+|       Minor change again in MF
+|
+* commit 030b0a58839d18b80a7a2e3b72bb9b7af85d4995 (martin-fowler-quote)
+| Author: --list <darshannegi110@mail.com>
+| Date:   Fri Feb 26 20:48:15 2021 +0530
+|
+|     Added a file called Martin Fowler copy from Linux
+|
+* commit 531880d449b9be4891e2e2dbab5ff81b441cc878 (anoter-fowler-quote)
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 20:45:19 2021 +0530
+|
+|     minor update
+|
+* commit af12c6fb17dc547a0ecb1c9c2a59b95e1d83f248
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 20:27:34 2021 +0530
+|
+|     inital commit
+|
+* commit 55b30b82e709761051b4ba2d92f7231dd6353219
+| Author: --list <darshannegi110@mail.com>
+| Date:   Thu Feb 25 14:19:43 2021 +0530
+|
+|     Added necessary changes
+|
+* commit 2c4d2c01f554a5072ad930017dd3fe07fb8b6acf
+| Author: --list <darshannegi110@mail.com>
+:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
