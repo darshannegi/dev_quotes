@@ -12,4 +12,6 @@ All quotes are sourced from https://en.wikiquote.org
 
 Such as 
 1. Linus Torwald
-2. And mine copy one
+2. Martin Fowler
+3. Alan Kay
+4. Bjarne Stroustrup
